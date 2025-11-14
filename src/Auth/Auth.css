@@ -1,0 +1,561 @@
+.auth-page{
+  background-image: url(../Home/Asstes/login-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth-container {
+  width: 380px;
+  height: 420px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  padding: 3rem;
+  box-sizing: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: "relative";
+  overflow: "hidden";
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.auth-container input {
+  width: 360px;
+  margin-bottom: 10px;
+  margin-right: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background-color: #0056b3;
+}
+
+.auth-links {
+  margin-top: 50px;
+}
+
+.auth-links button {
+  background: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin:  5px;
+}
+
+.social-buttons button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.google-btn {
+  background-color: #db4437;
+}
+
+.facebook-btn {
+  background-color: #1877f2;
+
+}
+
+/* Responsive Design for Auth */
+@media (max-width: 768px) {
+  .auth-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .auth-container h2 {
+    font-size: 24px;
+  }
+
+  .auth-container input {
+    padding: 12px;
+  }
+
+  .auth-container button {
+    padding: 12px;
+  }
+
+  .social-buttons button {
+    padding: 12px;
+  }
+
+  /* Home page cards responsive */
+  .card {
+    width: 250px;
+    height: 350px;
+  }
+
+  .e-cardin {
+    width: 220px;
+    margin: 15px;
+  }
+
+  .e-cardin img {
+    width: 220px;
+    height: 280px;
+  }
+
+  .main-card {
+    margin: 20px;
+    background: red;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    width: 95%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .auth-container h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .auth-container input {
+    padding: 10px;
+  }
+
+  .auth-container button {
+    padding: 10px;
+  }
+
+  .social-buttons button {
+    padding: 10px;
+  }
+
+  /* Home page cards responsive */
+  
+
+  .e-cardin {
+    width: 150px;
+    margin: 10px;
+    background: red;
+  }
+
+  .e-cardin img {
+    width: 120px;
+    height: 40px;
+  }
+
+  .e-cardin p {
+    font-size: 16px;
+  }
+
+  .main-card {
+    margin: 10px;
+    gap: 15px;
+  }
+}
+
+
+
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #ff6f00;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 40px;
+  font-family: Arial, sans-serif;
+  z-index: 1000; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: -20px;
+}
+.nav-menu li:hover{
+  color: #ee3806;
+}
+.image img{
+    height: 50px;
+    width: 70px;
+    border-radius: 50px;
+    /* margin-left: -220px; */
+}
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 300px;
+    gap: 12px;
+}
+.input input {
+    width: 500px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding-left: 25px;
+    color: #626262;
+    background: #ebfffc;
+    font-size: 15px;
+}
+
+.input img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #ebfffc;
+    cursor: pointer;
+}
+.right-card{
+  display: flex;
+  justify-content: center;
+  margin-left: 250px;
+  align-items: center;
+}
+.card-img{
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 35px;
+  border-radius: 10%;
+  margin-left: 10px;
+  border-radius: none;
+  border-style: none;
+  font-size: 20px;
+  text-align: center;
+}
+.card-img:hover{
+  background-color: #15ec9d;
+}
+.logout-button{
+  background: white;
+  color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hamburger Button Styles */
+.hamburger-button {
+  display: block; /* Show on all screen sizes */
+  font-size: 24px;
+  color: white;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Side Menu Styles */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden off-screen to the left */
+  width: 250px;
+  height: 100%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px; /* Space for navbar height */
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.side-menu.open {
+  left: 0; /* Slide in from left */
+}
+
+.menu-item {
+  padding: 15px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 18px;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Overlay Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container2 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 250px;
+    height: 350px;
+  }
+
+  .e-card {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .e-cardin {
+    width: 220px;
+    margin: 15px;
+  }
+
+  .e-cardin img {
+    width: 220px;
+    height: 280px;
+  }
+
+  .main-card {
+    margin: 20px;
+  }
+
+  .hamburger-button {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  .nav-menu {
+    display: none; /* Hide regular menu on mobile */
+  }
+
+  .input {
+    display: none; /* Hide search on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .container2 {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .card {
+    width: 300px;
+    height: 400px;
+    margin: 10px 0;
+  }
+
+  .cardin {
+    width: 150px;
+    height: 100px;
+    padding: 15px;
+  }
+
+  .cardin h3 {
+    font-size: 16px;
+  }
+
+  .cardin p {
+    font-size: 14px;
+  }
+
+  .button-card {
+    font-size: 14px;
+  }
+
+  .e-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .e-cardin {
+    width: 280px;
+    margin: 10px;
+  }
+
+  .e-cardin img {
+    width: 280px;
+    height: 350px;
+  }
+
+  .e-cardin h2 {
+    font-size: 18px;
+  }
+
+  .e-cardin h4 {
+    font-size: 16px;
+  }
+
+  .e-cardin p {
+    font-size: 18px;
+  }
+
+  .main-card {
+    margin: 10px;
+    gap: 15px;
+  }
+
+  .hamburger-button {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  .nav-menu {
+    display: none; /* Hide regular menu on mobile */
+  }
+
+  .input {
+    display: none; /* Hide search on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding-top: 60px;
+  }
+
+  .container2 {
+    padding: 5px;
+  }
+
+  .card {
+    width: 250px;
+    height: 350px;
+  }
+
+  .cardin {
+    width: 120px;
+    height: 80px;
+    padding: 10px;
+  }
+
+  .cardin h3 {
+    font-size: 14px;
+  }
+
+  .cardin p {
+    font-size: 12px;
+  }
+
+  .button-card {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .e-cardin {
+    width: 200px;
+    margin: 5px;
+  }
+
+  .e-cardin img {
+    width: 200px;
+    height: 250px;
+  }
+
+  .e-cardin h2 {
+    font-size: 16px;
+  }
+
+  .e-cardin h4 {
+    font-size: 14px;
+  }
+
+  .e-cardin p {
+    font-size: 16px;
+  }
+
+  .main-card {
+    margin: 5px;
+    gap: 10px;
+  }
+
+  .hamburger-button {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  .nav-menu {
+    display: none; /* Hide regular menu on mobile */
+  }
+
+  .input {
+    display: none; /* Hide search on mobile */
+  }
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  margin-left: 20px;
+}
+.profile img {
+  width: 55px;
+  height: 50px;
+  border-radius: 50%;
+}

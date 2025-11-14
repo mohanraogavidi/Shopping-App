@@ -1,0 +1,277 @@
+Navbar Styles
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.side-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.menu-item {
+  margin: 10px 0;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-search input {
+  padding: 8px 40px 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 200px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  color: #666;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-btn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ff4500;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.login-btn, .signup-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.signup-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Fashion Banner */
+.fashion {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.fashion img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Category Grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.col-3 {
+  flex: 1 1 200px;
+  max-width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.col-3:hover {
+  transform: scale(1.05);
+}
+
+.col-3 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.col-3 p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Product Sections */
+.mens-section, .women-section, .kids-section, .bags-section, .shoes-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2.5em;
+}
+
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.col-4 {
+  flex: 1 1 250px;
+  max-width: 250px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.col-4:hover {
+  transform: translateY(-5px);
+}
+
+.col-4 img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.col-4 h4 {
+  padding: 10px;
+  margin: 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.col-4 p {
+  padding: 0 10px 10px;
+  margin: 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.col-4 span {
+  color: #ff4500;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger-button {
+    display: block;
+  }
+
+  .side-menu {
+    display: none;
+  }
+
+  .nav-search input {
+    width: 150px;
+  }
+
+  .row {
+    padding: 10px;
+  }
+
+  .col-3 {
+    flex: 1 1 150px;
+    max-width: 150px;
+  }
+
+  .col-4 {
+    flex: 1 1 200px;
+    max-width: 200px;
+  }
+}

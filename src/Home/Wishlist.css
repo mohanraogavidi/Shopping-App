@@ -1,0 +1,232 @@
+.wishlist-page{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding-top: 70px;
+    text-align: center;
+    /* background-color: black; */
+
+}
+.wishlist-page h1 {
+    padding-left: 30px;
+    /* color: white; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.wishlist-container{
+     display: flex;
+     justify-content: center;
+}
+.wishlist-items{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.wishlist-item {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 900px;
+    height: 180px;
+    background: linear-gradient(to right, #272626, #5c95b4);
+    border-radius: 10px;
+    margin: 10px;
+}
+.wishlist-item-image {
+
+    width: 130px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.wishlist-item-info {
+    width: 300px;
+    height: auto;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 15px;
+}
+.wishlist-item-info h3 {
+    font-size: 20px;
+    padding-bottom: -20px;
+    color: tomato;
+}
+.wishlist-item-info p{
+    font-size: 15px;
+    color: white;
+}
+.wishlist-actions{
+  display: flex;
+  flex-direction: column; /* stack buttons vertically */
+  align-items: center;    /* center horizontally */
+  gap: 10px; 
+}
+.add-to-cart-button {
+  width: 180px;
+  background: linear-gradient(to right, #28a745, #20c997);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 10px auto;
+}
+.add-to-cart-button:hover {
+  background: linear-gradient(to right, #218838, #17a2b8);
+}
+.remove-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, #dd3b13, #e22828);
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    margin: 10px;
+    margin-left: 300px;
+    margin-top: 90px;
+    display: block;
+  margin: 10px auto;
+}
+.back-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    height: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .wishlist-item {
+    width: 95%;
+    height: 160px;
+  }
+
+  .wishlist-item-info {
+    font-size: 14px;
+  }
+
+  .wishlist-item-info h3 {
+    font-size: 18px;
+  }
+
+  .wishlist-item-info p {
+    font-size: 14px;
+  }
+
+  .remove-button {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wishlist-page h1 {
+    padding-left: 10px;
+    font-size: 24px;
+  }
+
+  .wishlist-item {
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 15px;
+  }
+
+  .wishlist-item-image {
+    width: 100px;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .wishlist-item-info {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .wishlist-item-info h3 {
+    font-size: 20px;
+  }
+
+  .wishlist-item-info p {
+    font-size: 16px;
+  }
+
+  .wishlist-actions {
+    margin: 5px;
+  }
+
+  .remove-button {
+    width: 80px;
+    height: 25px;
+    font-size: 16px;
+    margin-left: 0;
+    margin-top: 10px;
+    align-self: center;
+  }
+
+  .back-button {
+    width: 120px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wishlist-page {
+    padding-top: 60px;
+  }
+
+  .wishlist-page h1 {
+    font-size: 20px;
+    padding-left: 5px;
+  }
+
+  .wishlist-item {
+    padding: 10px;
+  }
+
+  .wishlist-item-image {
+    width: 80px;
+  }
+
+  .wishlist-item-info {
+    font-size: 14px;
+  }
+
+  .wishlist-item-info h3 {
+    font-size: 18px;
+  }
+
+  .wishlist-item-info p {
+    font-size: 14px;
+  }
+
+  .remove-button {
+    width: 70px;
+    height: 20px;
+    font-size: 14px;
+  }
+
+  .back-button {
+    width: 100px;
+    height: 35px;
+  }
+}
