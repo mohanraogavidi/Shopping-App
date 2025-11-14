@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -56,6 +56,11 @@ import shoesreebok from "../Assets/shoesreebok.jpeg";
 
 export default function HomePage({ onLogout }) {
   const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearchChange = (query) => {
+    setSearchQuery(query);
+  };
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -129,9 +134,16 @@ export default function HomePage({ onLogout }) {
     { id: 49, image: bagszouk, brand: "Zouk", name: "Zouk Bag", price: "₹4,000" },
   ];
 
+  const allProducts = [...mensProducts, ...womensProducts, ...kidsProducts, ...shoesProducts, ...bagsProducts];
+
+  const filteredProducts = allProducts.filter(product =>
+    product.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
-      <Navbar onLogout={onLogout} />
+      <Navbar onLogout={onLogout} searchQuery={searchQuery} onSearchChange={handleSearchChange} />
       <div style={{paddingTop: "80px", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", width: "100%", minHeight: "100vh",backgroundColor: "#e0f7fa",}}>
         <div style={{display: "flex", justifyContent: "center",alignItems: "center",}}>
           <img src={bgimage} alt="imagebg" style={{width: "100%"}} />
@@ -161,6 +173,32 @@ export default function HomePage({ onLogout }) {
             </div>
           ))}
         </div>
+
+        {searchQuery && filteredProducts.length >= 2 ? (
+          <div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", marginTop: "20px", paddingTop: "20px",}}>
+            <h1 style={{fontSize: "32px", fontWeight: "bold", color: "#00796b", marginBottom: "20px", textAlign: "center"}}>Search Results</h1>
+            <div style={{display: "flex", justifyContent: "center", flexDirection: "row", alignItems: "center", margin: "20px", flexWrap: "wrap", gap: "20px",}}>
+              {filteredProducts.slice(0, 10).map((product) => (
+                <div key={product.id} onClick={() => handleProductClick(product.id)}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "scale(1.05)";
+                  e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.5)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "scale(1)";
+                  e.currentTarget.style.boxShadow = "15px 14px 15px rgba(60, 60, 59, 0.3)";
+                }}
+                  style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", width: "200px", margin: "15px", borderRadius: "15px", paddingBottom: "5px", backgroundColor: "#fff", border: "2px solid #e0e0e0", boxShadow: "15px 14px 15px rgba(60, 60, 59, 0.3)", cursor: "pointer", }}
+                >
+                  <img src={product.image} alt={product.name} style={{borderRadius: "15px 15px 0 0",width: "100%", height: "270px", objectFit: "cover",}} />
+                  <h2 style={{fontSize: "18px",fontWeight: "600",color: "#00796b", margin: "1px 0 2px 0",minHeight: "10px", alignItems:"center"}}>{product.brand}</h2>
+                  <h4 style={{fontSize: "14px",color: "#555", fontWeight: "400", margin: "4px", minHeight: "10px",}}>{product.name}</h4>
+                  <p style={{fontSize: "18px",color: "#28a745", fontWeight: "700",margin: 0,}}>{product.price}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         <div style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", gap: "20px", margin: "30px",}}>
           {[{ title: "Mens Collections", data: mensProducts, id: "mens-section" },

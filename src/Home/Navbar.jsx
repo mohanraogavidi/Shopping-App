@@ -5,7 +5,7 @@ import search from './Asstes/search2.png';
 import profile from './Asstes/Profile.jpg'
 import {FaTimes,FaBars} from 'react-icons/fa';
 
-export default function Navbar({ onLogout }) {
+export default function Navbar({ onLogout, searchQuery, onSearchChange }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [cartCount, setCartCount] = useState(0);
   const [wishlistCount, setWishlistCount] = useState(0);
@@ -63,7 +63,7 @@ export default function Navbar({ onLogout }) {
 
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',width: '500px',height:"50px", marginLeft: '400px',  color: '#626262', background: '#ebfffc', borderRadius: '40px',}}>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',width:"450px", backgroundColor:'#fff', gap: '12px',borderRadius: '40px',  }}>
-            <input type="text" placeholder="Search " style={{ width: '380px', height: '20px', border: 'none', outline: 'none',  paddingLeft: '25px', fontSize: '15px',borderRadius: '40px', }}/>
+            <input type="text" placeholder="Search " value={searchQuery} onChange={(e) => onSearchChange(e.target.value)} style={{ width: '380px', height: '20px', border: 'none', outline: 'none',  paddingLeft: '25px', fontSize: '15px',borderRadius: '40px', }}/>
             <img src={search} alt="search" style={{ width: '35px', borderRadius: '50%', background: '#ebfffc', cursor: 'pointer' }} />
           </div>
         </div>
